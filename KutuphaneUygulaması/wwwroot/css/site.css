@@ -1,0 +1,35 @@
+﻿/* 1) Global reset (isteğe bağlı ama önerilir) */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2) Html elemanına tam ekran arka plan görseli */
+html {
+    height: 100%;
+    background-image: url('https://i.ibb.co/G4m01VWW/nordwood-themes-R53t-Tg6-J4c-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Görseli ekranı kayıpsız kaplamak için */
+    background-position: center center; /* Ortala */
+    background-attachment: fixed; /* Sayfa kaydırılsa da sabit kalsın */
+}
+
+/* Örnek: turkuaz yarı saydam bir navbar */
+.navbar.custom-nav {
+    background-color: rgba(32, 201, 151, 0.85) !important; /* Turkuaz (20C997) %85 opak */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+    /* Marka adı ve linklerin rengi */
+    .navbar.custom-nav .navbar-brand,
+    .navbar.custom-nav .nav-link {
+        color: #fff !important;
+    }
+
+        .navbar.custom-nav .nav-link:hover {
+            color: #c8f7e8 !important; /* Hover’da biraz açığı */
+            text-decoration: underline;
+        }

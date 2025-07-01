@@ -1,0 +1,87 @@
+﻿
+<!-- Sayfanın <head> veya stil dosyanıza ekleyin -->
+<style>
+  .gif-container {
+    display: flex;
+    justify-content: center;   /* Yatayda ortalar */
+    align-items: center;       /* Dikeyde ortalar (container yüksekliği varsa) */
+    margin: 2rem 0;            /* Üst-alt boşluk */
+  }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hakkında</title>
+  <style>
+    /* Aynı stiller eklendi */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 60px;
+    }
+    nav {
+      background: #333;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hakkında</h1>
+    <p>Bu sayfa, proje ve geliştirici hakkında detaylı bilgileri içerir. Buraya özgeçmiş veya projenin amacı gibi bilgiler ekleyebilirsiniz.</p>
+    <!-- Privacy Policy içeriğinizin ilgili kısmı -->
+<section id="privacy">
+  
+  <p>Burada gizlilik politikanıza dair açıklamalar yer alıyor...</p>
+
+  <div class="gif-container">
+    <iframe
+      src="https://tenor.com/embed/3228235746377647455?autoplay=0"
+      width="498"
+      height="498"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+ 
+</section>
+
+  </main>
+  <footer>
+    &copy; 2025 Proje Sahibinin İsmi. Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>

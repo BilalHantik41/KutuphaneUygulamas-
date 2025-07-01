@@ -1,0 +1,45 @@
+﻿@model IEnumerable<KutuphaneUygulaması.Models.AuthorListViewModel>
+@{
+    ViewData["Title"] = "Yazar Listesi";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="List" method="post" class="row g-3 mb-3">
+    @Html.AntiForgeryToken()
+    <div class="col-auto">
+        <input type="text" name="searchTerm" class="form-control" placeholder="Yazar adı ara" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Ara</button>
+    </div>
+</form>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Yeni Yazar Ekle</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Ad Soyad</th>
+            <th class="text-center">Doğum Tarihi</th>
+            <th class="text-center"> Düzenleme Seçenekleri</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var author in Model)
+    {
+        <tr>
+            <td class="text-center">@author.Id</td>
+            <td class="text-center">@author.FullName</td>
+            <td class="text-center">@author.DateOfBirth.ToShortDateString()</td>
+            <td class="text-center">
+                <a asp-action="Details" asp-route-id="@author.Id" class="btn btn-info btn-sm">Detay</a>
+                <a asp-action="Edit"    asp-route-id="@author.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                <a asp-action="Delete"  asp-route-id="@author.Id" class="btn btn-danger btn-sm">Sil</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
