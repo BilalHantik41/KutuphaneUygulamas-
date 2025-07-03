@@ -16,7 +16,7 @@ namespace KutuphaneYonetimSistemi.Controllers
     {
         private readonly List<Author> _authors = InMemoryDataStore.Authors;
 
-        // GET: /Author/List
+        // GET: /Author/List    
         [HttpGet("List")]
         public IActionResult List()
         {

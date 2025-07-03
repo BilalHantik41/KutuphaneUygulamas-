@@ -12,32 +12,48 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-            <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Kütüphane Yönetim Sistemi</a>
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+       <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+  <div class="container">
+    <!-- Marka ve GIF -->
+    <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+  <img src="https://i.ibb.co/CsQNrXJw/book.png"
+     alt="Kitap Logosu"
+     class="img-fluid"
+     style="height:40px; width:auto;" />
+  <span class="ms-2">Kütüphane Yönetim Sistemi</span>
+</a>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Privacy">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Book" asp-action="List">Kitaplar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Author" asp-action="List">Yazarlar</a>
-                        </li>
-                       
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+       
+         <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTkyazFlaXRpNWN5d3NidHB2YXZuYng1aWMwdXlqNWlobWJwbTJnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8N4fPgHDbC8Kb4Nofj/giphy.gif"
+     alt="Kitap Logosu"
+     class="img-fluid"
+     style="height:40px; width:auto;" />
+        <li class="nav-item">
+          <a class="nav-link" asp-controller="Book" asp-action="List">Kitaplar</a>
+        </li>
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmhxNG9hZno2OGMyaHYyNXN2aDd3am91djl5Y3dxN3ZmeDU3MXdjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/OQyUzwykTvyzRdm2Ar/giphy.gif"
+     alt="Kitap Logosu"
+     class="img-fluid"
+     style="height:40px; width:auto;" />
+        <li class="nav-item">
+          <a class="nav-link" asp-controller="Author" asp-action="List">Yazarlar</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" asp-controller="Home" asp-action="Privacy">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
 
     <div class="container mt-4">

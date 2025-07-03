@@ -23,11 +23,11 @@
         <tr>
             <th>ID</th>
     <th class="text-center">AuthorId</th>
-    <th>Kitap İsmi</th>
-    <th>Yazar</th>
-    <th>Tür</th>
-    <th>Yayın Tarihi</th>
-    <th>ISBN</th>
+    <th class="text-center">Kitap İsmi</th>
+    <th class="text-center">Yazar</th>
+    <th class="text-center">Tür</th>
+    <th class="text-center">Yayın Tarihi</th>
+    <th class="text-center">ISBN</th>
     <th class="text-center">Kopya Sayısı</th>
     <th class="text-center">Düzenleme Seçenekleri</th> @* İşlemler sütunu için boş başlık *@
         </tr>
@@ -36,13 +36,13 @@
     @foreach(var book in Model)
     {
         <tr>
-            <td>@book.Id</td>               
+            <td class="text-center">@book.Id</td>               
             <td class="text-center">@book.AuthorId</td>            
-            <td>@book.Title</td>
-            <td>@book.AuthorFullName</td>
-            <td>@book.Genre</td>
-            <td>@book.PublishDate.ToShortDateString()</td>
-            <td>@book.ISBN</td>
+            <td class="text-center">@book.Title</td>
+            <td class="text-center">@book.AuthorFullName</td>
+            <td class="text-center">@book.Genre</td>
+            <td class="text-center">@book.PublishDate.ToShortDateString()</td>
+            <td class="text-center">@book.ISBN</td>
             <td class="text-center">@book.CopiesAvailable</td>
             <td class="text-center"> 
                 <a  asp-action="Details" asp-route-id="@book.Id" class="btn btn-info btn-sm">Detay</a>

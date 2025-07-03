@@ -17,19 +17,44 @@ html {
     background-attachment: fixed; /* Sayfa kaydırılsa da sabit kalsın */
 }
 
-/* Örnek: turkuaz yarı saydam bir navbar */
-.navbar.custom-nav {
-    background-color: rgba(32, 201, 151, 0.85) !important; /* Turkuaz (20C997) %85 opak */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
 
     /* Marka adı ve linklerin rengi */
     .navbar.custom-nav .navbar-brand,
     .navbar.custom-nav .nav-link {
-        color: #fff !important;
+        color: #1A3D5B !important;
     }
 
         .navbar.custom-nav .nav-link:hover {
             color: #c8f7e8 !important; /* Hover’da biraz açığı */
             text-decoration: underline;
         }
+
+/* Navbar içindeki logo */
+.navbar-brand .book-logo {
+    height: 40px; /* istediğin yüksekliği ver */
+    width: 100%; /* en-boy oranını koru */
+    max-width: 100%; /* konteyneri aşmasın */
+}
+
+/* Küçük ekranlarda daha da küçültmek istersen */
+@media (max-width: 576px) {
+    .navbar-brand .book-logo {
+        height: 30px;
+    }
+}
+
+
+/* Yeni Kitap Ekle butonu için özel renkler */
+.btn-book-add {
+  background-color: #1A3D5B;   /* Butonun arka planı (Derin Lacivert) */
+  border-color:     #1A3D5B;   /* Kenarlık rengi, arka planla aynı */
+  color:            #ffffff;   /* Yazı rengi, beyaz */
+}
+
+/* Hover (üzerine gelince) durumunda biraz koyulaşsın: */
+.btn-book-add:hover,
+.btn-book-add:focus {
+  background-color: #162C4A;   /* Biraz daha koyu Derin Lacivert */
+  border-color:     #162C4A;
+  color:            #ffffff;
+}
