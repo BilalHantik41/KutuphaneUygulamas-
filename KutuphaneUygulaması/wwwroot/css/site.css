@@ -18,16 +18,19 @@ html {
 }
 
 
-    /* Marka adı ve linklerin rengi */
-    .navbar.custom-nav .navbar-brand,
+.navbar.custom-nav {
+    background-color: #1F2A30;
+}
+
     .navbar.custom-nav .nav-link {
-        color: #1A3D5B !important;
+        color: #E0E6E6;
     }
 
         .navbar.custom-nav .nav-link:hover {
-            color: #c8f7e8 !important; /* Hover’da biraz açığı */
-            text-decoration: underline;
+            color: #4AA96C;
         }
+
+
 
 /* Navbar içindeki logo */
 .navbar-brand .book-logo {
@@ -44,17 +47,3 @@ html {
 }
 
 
-/* Yeni Kitap Ekle butonu için özel renkler */
-.btn-book-add {
-  background-color: #1A3D5B;   /* Butonun arka planı (Derin Lacivert) */
-  border-color:     #1A3D5B;   /* Kenarlık rengi, arka planla aynı */
-  color:            #ffffff;   /* Yazı rengi, beyaz */
-}
-
-/* Hover (üzerine gelince) durumunda biraz koyulaşsın: */
-.btn-book-add:hover,
-.btn-book-add:focus {
-  background-color: #162C4A;   /* Biraz daha koyu Derin Lacivert */
-  border-color:     #162C4A;
-  color:            #ffffff;
-}

@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "Kitap Düzenle";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 class="text-success">@ViewData["Title"]</h1>
+
 
 <form asp-action="Edit" method="post">
     @Html.AntiForgeryToken()
