@@ -24,7 +24,7 @@ namespace KutuphaneYonetimSistemi.Controllers
                 .Select(b => new BookListViewModel
                 {
                     Id = b.Id,
-                    AuthorId = b.AuthorId,                // ← ekledik
+                    AuthorId = b.AuthorId,                
                     Title = b.Title,
                     AuthorFullName = _authors.First(a => a.Id == b.AuthorId) is var a
                                         ? $"{a.FirstName} {a.LastName}"
@@ -41,10 +41,10 @@ namespace KutuphaneYonetimSistemi.Controllers
 
         // POST: /Book/List  (basit arama)
         [HttpPost("List")]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] // CSRF saldırılarına karşı basit ama etkili bir kalkan oluşturmak için kullanıyoruz.
         public IActionResult List(string searchTerm)
         {
-            // Bellek içi koleksiyon üzerinde çalışalım
+            
             var filtered = _books.AsEnumerable();
             if (!string.IsNullOrWhiteSpace(searchTerm))
             {
@@ -53,7 +53,7 @@ namespace KutuphaneYonetimSistemi.Controllers
                     b.ISBN.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
             }
 
-            // Şimdi block-bodied lambda ile projeye devam edebiliriz
+            
             var model = filtered
                 .Select(b =>
                 {
@@ -234,7 +234,7 @@ namespace KutuphaneYonetimSistemi.Controllers
 
         // POST: /Book/Delete/5
         [HttpPost("Delete/{id:int}")]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]  
         public IActionResult DeleteConfirmed(int id)
         {
             var b = _books.FirstOrDefault(x => x.Id == id);

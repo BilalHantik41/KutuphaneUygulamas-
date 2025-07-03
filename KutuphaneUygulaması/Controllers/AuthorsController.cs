@@ -98,7 +98,7 @@ namespace KutuphaneYonetimSistemi.Controllers
                 LastName = vm.LastName,
                 DateOfBirth = vm.DateOfBirth
             });
-
+            // nameof kullanımı hatalara karşı uyarmak için kullanıyoruz. İleride güncelleme yapıldığında dosya ismi vs değişirse uyarır.
             return RedirectToAction(nameof(List));
         }
 
@@ -161,7 +161,7 @@ namespace KutuphaneYonetimSistemi.Controllers
             var a = _authors.FirstOrDefault(x => x.Id == id);
             if (a != null)
                 _authors.Remove(a);
-
+            // nameof kullanımı hatalara karşı uyarmak için kullanıyoruz. İleride güncelleme yapıldığında dosya ismi vs değişirse uyarır.
             return RedirectToAction(nameof(List));
         }
     }

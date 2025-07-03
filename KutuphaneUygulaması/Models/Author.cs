@@ -17,7 +17,7 @@ namespace KutuphaneUygulaması.Models
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
-        // Navigation back-reference
+       
         public ICollection<Book> Books { get; set; } = new List<Book>();
     }
 }
