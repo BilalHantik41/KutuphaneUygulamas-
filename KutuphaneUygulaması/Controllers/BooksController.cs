@@ -21,18 +21,25 @@ namespace KutuphaneYonetimSistemi.Controllers
         public IActionResult List()
         {
             var model = _books
-                .Select(b => new BookListViewModel
+                .Select(b =>
                 {
-                    Id = b.Id,
-                    AuthorId = b.AuthorId,                
-                    Title = b.Title,
-                    AuthorFullName = _authors.First(a => a.Id == b.AuthorId) is var a
-                                        ? $"{a.FirstName} {a.LastName}"
-                                        : "Bilinmiyor",
-                    Genre = b.Genre,
-                    PublishDate = b.PublishDate,
-                    ISBN = b.ISBN,
-                    CopiesAvailable = b.CopiesAvailable
+                    // Önce yazarı bulmaya çalışıyoruz
+                    var author = _authors.FirstOrDefault(a => a.Id == b.AuthorId);
+
+                    return new BookListViewModel
+                    {
+                        Id = b.Id,
+                        AuthorId = b.AuthorId,
+                        Title = b.Title,
+                        // Eğer author null değilse ad soyadı, null ise "Bilinmiyor"
+                        AuthorFullName = author != null
+                                         ? $"{author.FirstName} {author.LastName}"
+                                         : "Bilinmiyor",
+                        Genre = b.Genre,
+                        PublishDate = b.PublishDate,
+                        ISBN = b.ISBN,
+                        CopiesAvailable = b.CopiesAvailable
+                    };
                 })
                 .ToList();
 
