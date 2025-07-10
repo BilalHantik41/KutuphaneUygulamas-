@@ -45,9 +45,9 @@
             <td class="text-center">@book.ISBN</td>
             <td class="text-center">@book.CopiesAvailable</td>
             <td class="text-center"> 
-                <a  asp-action="Details" asp-route-id="@book.Id" class="btn btn-info btn-sm">Detay</a>
-                <a asp-action="Edit"    asp-route-id="@book.Id" class="btn btn-warning btn-sm">Düzenle</a>
-                <a asp-action="Delete"  asp-route-id="@book.Id" class="btn btn-danger btn-sm">Sil</a>
+                    <a asp-action="Details" asp-route-id="@book.Id" class="btn btn-info btn-sm"><i class="bi bi-info-square"></i> Detay</a>
+                    <a asp-action="Edit" asp-route-id="@book.Id" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i> Düzenle</a>
+                    <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Sil</a>
             </td>
         </tr>
     }

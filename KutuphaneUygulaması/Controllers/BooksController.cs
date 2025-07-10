@@ -23,7 +23,7 @@ namespace KutuphaneYonetimSistemi.Controllers
             var model = _books
                 .Select(b =>
                 {
-                    // Önce yazarı bulmaya çalışıyoruz
+                    // Önce yazarı bulmaya çalışıyoruz. 
                     var author = _authors.FirstOrDefault(a => a.Id == b.AuthorId);
 
                     return new BookListViewModel
